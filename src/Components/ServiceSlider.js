@@ -55,18 +55,21 @@ const ServiceSlider = () => {
           slidesPerView: 3,
           spaceBetween: 15,
         },
+
       }}
       freeMode={true}
       loop={true}
       autoplay={{
-        delay: 4000,
+        delay:4000,
         disableOnInteraction: false,
       }}
       pagination={{
+        el:'swiper-pagination',
+        type:'bullets',
         clickable: true,
       }}
       modules={{ FreeMode, Pagination, Loop, AutoPlay }}
-      className='h-[240px] sm-h-[340px]'
+      className='h-[240px]'
     >
       {serviceData.map((item, index) => (
         <SwiperSlide key={index}>
