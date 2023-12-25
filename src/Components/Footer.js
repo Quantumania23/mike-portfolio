@@ -20,8 +20,8 @@ const Footer = () => {
             </Link>
         </div>
         <Link
-        href="https://github.com/quantumania23"
-        className='underline'
+        href="https://www.bbc.com/news/topics/c207p54m4rqt"
+        className='underline-offset-2  hover:no-underline'
         target={"_blank"}
       >
         Peace
