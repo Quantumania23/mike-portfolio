@@ -2,7 +2,7 @@ const withPlugins = require('next-compose-plugins');
 
 module.exports = withPlugins([
   {
-    webpack: (config, { isServer }) => {
+    webpack: (config, { }) => {
       // File loader for GLB files
       config.module.rules.push({
         test: /\.(glb)$/,

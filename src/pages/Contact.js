@@ -8,8 +8,8 @@ import Alert from "@/Components/Alert";
 import Loader from "@/Components/Loader";
 import { Canvas } from "@react-three/fiber";
 import { SpotLight } from "@react-three/drei";
-import Fox from "../../models/Fox";
 import UseAlert from "@/Components/Hooks/UseAlert";
+import Fox from "@/models/Fox";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -176,7 +176,7 @@ const Contact = () => {
                     currentAnimation={currentAnimation}
                     position={[0.5, 0.35, 0]}
                     rotation={[12.6, -0.6, 0]}
-                    scale={[0.5, 0.5, 0.5]}
+                    scale={[0.6, 0.6, 0.6]}
                   />
                 </Suspense>
               </Canvas>

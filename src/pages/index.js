@@ -6,7 +6,7 @@ import Contact from "@/Components/Contacts";
 import { LinkArrow } from "@/Components/Icons";
 import Head from "next/head";
 import Image from "next/image";
-import profilePic from "../../public/images/profile/image-75-74-removebg.png";
+import profilePic from "../../public/images/profile/image-75-74-removebg-preview.png";
 import AnimatedText from "@/Components/AnimatedText";
 import HireMe from "@/Components/HireMe";
 import lightBulb from "../../public/images/svgs/bulb.png";
@@ -56,7 +56,7 @@ export default function Home() {
                 className="!text-5xl !text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs dark:text-light">
-                As a skilled Front-end developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js Next.js and web development.
+                As a skilled Front-end developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js, Next.js and web development.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
@@ -78,7 +78,7 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div className="absolute right-0 bottom-0 inline-block w-24 -rotate-12 animate-pulse duration-75 z-10">
+        <div className="absolute right-5 bottom-0 inline-block w-24 -rotate-12 animate-pulse duration-75 z-10 md:hidden">
           <Image src={lightBulb} alt="Quantumania23" className="w-full h-auto" />
         </div>
       </main>
@@ -88,123 +88,3 @@ export default function Home() {
     </>
   );
 }
-
-// import { Canvas } from "@react-three/fiber";
-// import { Suspense, useEffect, useRef, useState } from "react";
-
-// import sakura from "../../assets/008. Harry Styles - Music For a Sushi Restaurant.mp3";
-// import { HomeInfo, Loader } from "../Components";
-// // import { soundoff, soundon } from "../../assets/icons";
-// import { Bird, Island, Plane, Sky } from "../models";
-
-// const Home = () => {
-//   const audioRef = useRef(new Audio(sakura));
-//   audioRef.current.volume = 0.4;
-//   audioRef.current.loop = true;
-
-//   const [currentStage, setCurrentStage] = useState(1);
-//   const [isRotating, setIsRotating] = useState(false);
-//   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
-
-//   useEffect(() => {
-//     if (isPlayingMusic) {
-//       audioRef.current.play();
-//     }
-
-//     return () => {
-//       audioRef.current.pause();
-//     };
-//   }, [isPlayingMusic]);
-
-//   const adjustBiplaneForScreenSize = () => {
-//     let screenScale, screenPosition;
-
-//     // If screen width is less than 768px, adjust the scale and position
-//     if (window.innerWidth < 768) {
-//       screenScale = [1.5, 1.5, 1.5];
-//       screenPosition = [0, -1.5, 0];
-//     } else {
-//       screenScale = [3, 3, 3];
-//       screenPosition = [0, -4, -4];
-//     }
-
-//     return [screenScale, screenPosition];
-//   };
-
-//   const adjustIslandForScreenSize = () => {
-//     let screenScale, screenPosition;
-
-//     if (window.innerWidth < 768) {
-//       screenScale = [0.9, 0.9, 0.9];
-//       screenPosition = [0, -6.5, -43.4];
-//     } else {
-//       screenScale = [1, 1, 1];
-//       screenPosition = [0, -6.5, -43.4];
-//     }
-
-//     return [screenScale, screenPosition];
-//   };
-
-//   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
-//   const [islandScale, islandPosition] = adjustIslandForScreenSize();
-
-//   return (
-//     <section className='w-full h-screen relative'>
-//       <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-//         {currentStage && <HomeInfo currentStage={currentStage} />}
-//       </div>
-
-//       <Canvas
-//         className={`w-full h-screen bg-transparent ${
-//           isRotating ? "cursor-grabbing" : "cursor-grab"
-//         }`}
-//         camera={{ near: 0.1, far: 1000 }}
-//       >
-//         <Suspense fallback={<Loader />}>
-//           <directionalLight position={[1, 1, 1]} intensity={2} />
-//           <ambientLight intensity={0.5} />
-//           <pointLight position={[10, 5, 10]} intensity={2} />
-//           <spotLight
-//             position={[0, 50, 10]}
-//             angle={0.15}
-//             penumbra={1}
-//             intensity={2}
-//           />
-//           <hemisphereLight
-//             skyColor='#b1e1ff'
-//             groundColor='#000000'
-//             intensity={1}
-//           />
-
-//           <Bird />
-//           <Sky isRotating={isRotating} />
-//           <Island
-//             isRotating={isRotating}
-//             setIsRotating={setIsRotating}
-//             setCurrentStage={setCurrentStage}
-//             position={islandPosition}
-//             rotation={[0.1, 4.7077, 0]}
-//             scale={islandScale}
-//           />
-//           <Plane
-//             isRotating={isRotating}
-//             position={biplanePosition}
-//             rotation={[0, 20.1, 0]}
-//             scale={biplaneScale}
-//           />
-//         </Suspense>
-//       </Canvas>
-
-//       <div className='absolute bottom-2 left-2'>
-//         <img
-//           src={!isPlayingMusic}
-//           alt='jukebox'
-//           onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-//           className='w-10 h-10 cursor-pointer object-contain'
-//         />
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Home;

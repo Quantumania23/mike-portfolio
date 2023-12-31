@@ -66,7 +66,8 @@ const PopupContent = ({ handleClose }) => {
           <form action="https://formsubmit.com/mikepeace981@gmail.com" method="POST" 
          className="flex flex-col gap-6 mt-0" onSubmit={handleSubmit}>
         <div className="grid flex-wrap grid-cols-1 gap-2">
-          <input type="text" placeholder="Full Name..." required
+          <input type="text" placeholder="Full Name..." 
+          required
           className="border" />
           <input
             type="email"
@@ -77,13 +78,13 @@ const PopupContent = ({ handleClose }) => {
           />
           <input type="hidden" name="_subject" value="new" />
         </div>
-        <br />
+        
         <textarea
         className="border"
           name=""
           id=""
-          cols="5"
-          rows="5"
+          cols="3"
+          rows="3"
           placeholder="Your Message"
         ></textarea>
         <input type="submit" value="Cognize now" className="cursor-pointer mt-4 bg-blue-500 text-white px-4 py-2 rounded-md"/>
