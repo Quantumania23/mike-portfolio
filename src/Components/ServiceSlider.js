@@ -60,9 +60,8 @@ const ServiceSlider = () => {
       freeMode={true}
       loop={true}
       autoplay={{
-        delay:4000,
-        disableOnInteraction: false,
-      }}
+   delay: 1000,
+ }}
       pagination={{
         el:'swiper-pagination',
         type:'bullets',

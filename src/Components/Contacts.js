@@ -56,7 +56,7 @@ const PopupContent = ({ handleClose }) => {
           </button>
         </div>
         <AnimatedText
-          text={submissionStatus === "success" ? "Thank you for contacting me!" : "Got a problem to solve, get your space suit ready and tell me what you need"}
+          text={submissionStatus === "success" ? "Thank you for contacting me!" : "Need a project done or looking for a dev? I'm just a few keystrokes away"}
           className="!text-sm !text-black !flex !flex-wrap !mb-4"
         />
         {submissionStatus === "success" ? (

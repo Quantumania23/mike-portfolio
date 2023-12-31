@@ -56,7 +56,7 @@ export default function Home() {
                 className="!text-5xl !text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs dark:text-light">
-                As a skilled Front-end developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js, Next.js and web development.
+                As a skilled Front-end developer, I am dedicated to turning ideas into innovative web applications and websites. Explore my latest projects and articles, showcasing my expertise in React.js, Next.js and web development.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
