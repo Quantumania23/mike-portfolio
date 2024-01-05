@@ -27,8 +27,7 @@ const Contact = () => {
     setisLoading(true);
     setCurrentAnimation("hit");
 
-    emailjs
-      .send(
+    emailjs.send(
         process.env.NEXT_APP_EMAILJS_SERVICE_ID,
         process.env.NEXT_APP_EMAILJS_TEMPLATE_ID,
         {
@@ -53,8 +52,7 @@ const Contact = () => {
           setCurrentAnimation("idle");
           setForm({ name: "", email: "", message: "" });
         }, [3000]);
-      })
-      .catch((error) => {
+      }).catch((error) => {
         setisLoading(false);
         setCurrentAnimation("idle");
         console.log(error);
@@ -91,7 +89,7 @@ const Contact = () => {
             {alert.show && <Alert {...alert} />}
 
             <div className="flex-1 min-w-[50%] flex flex-col">
-              <h1 className="head-text">Get your space suit ready</h1>
+              <h1 className="sm:text-5xl text-3xl font-semibold sm:leading-snug;">Get in touch</h1>
               <form
                 className="w-full flex flex-col gap-7 mt-14"
                 onSubmit={handleSubmit}
